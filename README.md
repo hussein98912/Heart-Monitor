@@ -76,21 +76,13 @@ Developed as part of a graduation project at **Arab International University (AI
 ---
 ### Mobile App View
 
-![Mobile Screenshot](Back/screenshots/Screenshot%202025-07-02%20172740.png)
+![Mobile Screenshot](Nabd_Backend/Back/screenshots/Screenshot 2025-07-02 172740.png)
 
 ---
 
 ### Doctor Dashboard View
 
-![Doctor Screenshot](Back/screenshots/Screenshot%202025-07-02%20172825.png)
+![Doctor Screenshot](Nabd_Backend/Back/screenshots/Screenshot 2025-07-02 172825.png)
 
-### Mobile App View
 
-![Mobile Screenshot](Back/screenshots/Screenshot%202025-07-02%20172740.png)
-
----
-
-### Doctor Dashboard View
-
-![Doctor Screenshot](Back/screenshots/Screenshot%202025-07-02%20172825.png)
 
