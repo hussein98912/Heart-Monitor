@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "13a7d562-f408-4537-817b-b4e074392e99",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34438671"
+	},
+	"item": [
+		{
+			"name": "doctor_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "nour",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12323223aaaAA@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor-login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor-login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nour\",\r\n    \"password\": \"12323223aaaAA@\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"first_name\": \"nour\",\r\n    \"last_name\": \"ahmad\",\r\n    \"gender\": \"M\",\r\n    \"birthdate\": \"1988-01-01\",\r\n    \"address\": \"123 Main St\",\r\n    \"certificate_image\": null,\r\n    \"identity_image\": null,\r\n    \"phone_number\":\"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor-signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor-signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor_logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 7e42251bcb990aacc5735158681966db30081478",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/doctor-logout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor-logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view_doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/doctors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view_doctorprofile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/profile/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"profile",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_doctor_pesronal_info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"new_username1\",\r\n    \"email\": \"new_email@example.com\",\r\n    \"first_name\": \"New First Name\",\r\n    \"last_name\": \"New Last Name\",\r\n    \"password\": \"new_password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_personal_info/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_personal_info",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_doctor_image",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "postman-cloud:///1ef137f6-d538-4860-8732-4d02e7df78f9"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/doctor/update/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"doctor",
+						"update",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor_to_patient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_id\": 1,\r\n    \"doctor_id\":4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/patients/doctor/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patients",
+						"doctor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_patient_result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/patient/3/result/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient",
+						"3",
+						"result",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sadsadsa\",\r\n    \"password\": \"12323223aaaAA@\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"first_name\": \"hassan\",\r\n    \"last_name\": \"ahmad\",\r\n    \"gender\": \"M\",\r\n    \"birthdate\": \"1988-01-01\",\r\n    \"address\": \"123 Main St\",\r\n    \"phone_number\":\"1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/patient-signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient-signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "hassan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12323223aaaAA@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/patient-login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient-login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/patient-logout/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient-logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view_patientprofile ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/patient-signup/13/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient-signup",
+						"13",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_patient_profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {  \r\n        \"password\": \"newpassword123\",\r\n        \"email\": \"newemail@example.com\",\r\n        \"first_name\": \"rock\",\r\n        \"last_name\": \"Doe\"\r\n    },\r\n    \"gender\": \"M\",\r\n    \"address\": \"123 Main Street\",\r\n    \"birthdate\": \"1996-01-01\"\r\n \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/patient-profile/13/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"patient-profile",
+						"13",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prediction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient\": 1,\r\n    \"PatientAge\": 33,\r\n    \"ventricular_rate\": 70.0,\r\n    \"atrial_rate\": 70.0,\r\n    \"qrs_duration\": 100.0,\r\n    \"qt_interval\": 400.0,\r\n    \"qt_corrected\": 420.0,\r\n    \"r_axis\": 30.0,\r\n    \"t_axis\": 20.0,\r\n    \"qrs_count\": 20,\r\n    \"t_offset\": 10.0\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/predict/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"predict",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_medical_data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient\": 3,\r\n    \"PatientAge\": 33,\r\n    \"ventricular_rate\": 70,\r\n    \"atrial_rate\": 70,\r\n    \"qrs_duration\": 100,\r\n    \"qt_interval\": 400,\r\n    \"qt_corrected\": 420,\r\n    \"r_axis\": 30,\r\n    \"t_axis\": 20,\r\n    \"qrs_count\": 20,\r\n    \"q_onset\": 10,\r\n    \"q_offset\": 15,\r\n    \"t_offset\": 10.0\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/medical-data/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"medical-data",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

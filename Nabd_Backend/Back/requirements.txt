@@ -1,0 +1,9 @@
+django
+djangorestframework
+jupyter
+pandas
+numpy
+scipy
+matplotlib
+scikit-learn
+
